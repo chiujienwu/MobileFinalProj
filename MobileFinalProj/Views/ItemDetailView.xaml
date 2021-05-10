@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileFinalProj.Views.ItemDetailView"
+             Padding="5"
+             Title="Item Stock Management"
+             >
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="150"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+                
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width=".4*"></ColumnDefinition>
+                <ColumnDefinition Width=".6*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="TitleLabel" 
+               Text="Edit item"
+               Grid.Row="0" 
+               Grid.Column="0" 
+               Grid.ColumnSpan="2" 
+               Style="{StaticResource TitleLabelStyle}"></Label>
+            <Image x:Name="ItemUrl" 
+               Grid.Column="0"
+               Grid.Row="1" 
+               Grid.ColumnSpan="2"
+               Source="{Binding SelectedItem.ImageUrl}"
+               Margin="10" 
+               WidthRequest="200" 
+               HeightRequest="200" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"></Image>
+            <!--<Image x:Name="ItemImage" 
+               Grid.Column="0"
+               Grid.Row="2" 
+               Grid.ColumnSpan="2"
+               Source="{Binding SelectedItem.ImageName}"
+               Margin="10" 
+               WidthRequest="200" 
+               HeightRequest="200" 
+               HorizontalOptions="Center" 
+               VerticalOptions="Center"></Image>-->
+            <Label Text="Item name" 
+               Grid.Row="2" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <Entry Grid.Row="2"
+               Grid.Column="1"
+               Text="{Binding SelectedItem.ItemName, Mode=TwoWay}" 
+               Style="{StaticResource RegularEntry}"></Entry>
+            <Label Text="Price" 
+               Grid.Row="3" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <Entry Grid.Row="3"
+               Grid.Column="1"
+               Text="{Binding SelectedItem.Price, Mode=TwoWay, StringFormat='{0:C2}'}" 
+               Style="{StaticResource RegularEntry}"></Entry>
+            <Label Text="Quantity" 
+               Grid.Row="4" 
+               Grid.Column="0"
+               Style="{StaticResource SmallLabelStyle}"></Label>
+            <Entry Grid.Row="4"
+               Grid.Column="1"
+               Text="{Binding SelectedItem.Quantity, Mode=TwoWay}"></Entry>
+
+            <Button x:Name="SaveItemButton" 
+                Clicked="SaveItemButton_OnClicked" 
+                Text="Save Item" 
+                Style="{StaticResource RegularButtonStyle}" 
+                Grid.Row="7" 
+                Grid.Column="0"
+                Grid.ColumnSpan="2"></Button>
+        </Grid>
+    </ScrollView>
+
+</ContentPage>
