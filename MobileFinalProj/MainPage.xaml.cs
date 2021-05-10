@@ -13,7 +13,7 @@ namespace MobileFinalProj
     {
         Item item = new Item
         {
-            Id = 1,
+            Id = Guid.Parse("{11DB10F5-C461-490F-A7A3-5BA5AF3A58AF}"),
             ItemName = "Ricky Henderson",
             Price = 2200.00,
             Quantity = 1

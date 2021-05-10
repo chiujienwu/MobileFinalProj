@@ -4,7 +4,12 @@
              x:Class="MobileFinalProj.Views.ItemOverviewView"
              Padding="5"
              Title="Item Stock Management"
+             xmlns:viewModels="clr-namespace:MobileFinalProj.ViewModels"
              >
+    <ContentPage.BindingContext>
+        <viewModels:ItemOverviewViewModel></viewModels:ItemOverviewViewModel>
+    </ContentPage.BindingContext>
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <DataTemplate x:Key="RegularItemTemplate">

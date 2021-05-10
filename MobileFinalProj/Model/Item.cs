@@ -7,13 +7,13 @@ namespace MobileFinalProj.Model
 {
     public class Item : INotifyPropertyChanged
     {
-        private int _id;
+        private Guid _id;
         private string _itemName;
         private string _imageName;
         private string _imageUrl;
         private double _price;
         private int _quantity;
-        public int Id
+        public Guid Id
         {
             get => _id;
             set

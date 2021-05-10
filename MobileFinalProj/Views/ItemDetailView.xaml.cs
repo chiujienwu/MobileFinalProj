@@ -75,9 +75,9 @@ namespace MobileFinalProj.Views
             //this.BindingContext = Item;
         }
 
-    //private async void SaveItemButton_OnClicked(object sender, EventArgs e)
-    //    {
-    //        await DisplayAlert("Success", "Item saved", "Done");
-    //    }
-    //}
+        private async void SaveItemButton_OnClicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Success", "Item saved", "Done");
+        }
+    }
 }

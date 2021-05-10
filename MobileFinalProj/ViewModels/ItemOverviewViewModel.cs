@@ -23,7 +23,8 @@ namespace MobileFinalProj.ViewModels
 
         public ItemOverviewViewModel()
         {
-            Items = new ObservableCollection<Item>();
+            //Items = new ObservableCollection<Item>();
+            Items = new ObservableCollection<Item>(ItemRepository.Items);
         }
     }
 }
