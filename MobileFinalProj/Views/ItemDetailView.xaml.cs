@@ -13,14 +13,14 @@ namespace MobileFinalProj.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemDetailView : ContentPage
     {
-        public Item Item { get; set; }
+        //public Item Item { get; set; }
         //public ItemDetailViewModel ItemDetailViewModel { get; set; }
         //public List<Item> Items { get; set; }
 
         public ItemDetailView(Item item)
         {
             InitializeComponent();
-            Item = item;
+            //Item = item;
 
             //    ItemDetailViewModel = new ItemDetailViewModel()
             //    {
@@ -72,12 +72,12 @@ namespace MobileFinalProj.Views
 
             //};
 
-            this.BindingContext = Item;
+            //this.BindingContext = Item;
         }
 
-    private async void SaveItemButton_OnClicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("Success", "Item saved", "Done");
-        }
-    }
+    //private async void SaveItemButton_OnClicked(object sender, EventArgs e)
+    //    {
+    //        await DisplayAlert("Success", "Item saved", "Done");
+    //    }
+    //}
 }
