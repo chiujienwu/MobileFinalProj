@@ -14,7 +14,7 @@ namespace MobileFinalProj.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemOverviewView : ContentPage
     {
-        //public ObservableCollection<Item> Items { get; set; }
+        public ObservableCollection<Item> Items { get; set; }
         public ItemOverviewView()
         {
             InitializeComponent();

@@ -1,9 +1,9 @@
-﻿using MobileFinalProj.ViewModels;
+﻿using MobileFinalProj.Model;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MobileFinalProj.Model
+namespace MobileFinalProj.ViewModels
 {
     public class ItemDetailViewModel : BaseViewModel
     {
