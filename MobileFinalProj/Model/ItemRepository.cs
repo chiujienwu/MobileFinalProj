@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MobileFinalProj.Model
@@ -55,5 +56,14 @@ namespace MobileFinalProj.Model
             Items.Add(item);
         }
 
+        public static void UpdateItem (Item item)
+        {
+            var oldItem = Items.Where(i => i.Id == item.Id).FirstOrDefault();
+            oldItem.ImageName = item.ImageName;
+            oldItem.Price = item.Price;
+            oldItem.ImageName = item.ImageName;
+            oldItem.ImageUrl = item.ImageUrl;
+            oldItem.Quantity = item.Quantity;
+        }
     }
 }
