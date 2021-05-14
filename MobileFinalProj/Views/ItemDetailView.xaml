@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MobileFinalProj.ViewModels"
              x:Class="MobileFinalProj.Views.ItemDetailView"
              Padding="5"
              Title="Item Stock Management"
              >
-
+    <!--<ContentPage.BindingContext>
+        <viewModels:ItemDetailViewModel></viewModels:ItemDetailViewModel>
+    </ContentPage.BindingContext>-->
+    
     <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
@@ -21,6 +25,7 @@
                 <ColumnDefinition Width=".4*"></ColumnDefinition>
                 <ColumnDefinition Width=".6*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            
             <Label x:Name="TitleLabel" 
                Text="Edit item"
                Grid.Row="0" 

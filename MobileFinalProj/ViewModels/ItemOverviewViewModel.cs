@@ -4,12 +4,15 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
+using System.Windows.Input;
 
 namespace MobileFinalProj.ViewModels
 {
     public class ItemOverviewViewModel: BaseViewModel
     {
         private ObservableCollection<Item> _items;
+        public ICommand LoadCommand { get; }
+        public ICommand AddCommand { get; }
 
         public ObservableCollection<Item> Items
         {
@@ -21,6 +24,7 @@ namespace MobileFinalProj.ViewModels
             }
         }
 
+        //during binding, if an Observable Collection is null, it won't bind
         public ItemOverviewViewModel()
         {
             //Items = new ObservableCollection<Item>();
