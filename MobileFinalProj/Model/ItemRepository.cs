@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace MobileFinalProj.Model
@@ -54,6 +55,14 @@ namespace MobileFinalProj.Model
             item.ImageUrl = "https://freepikpsd.com/wp-content/uploads/2019/10/no-image-png-5-Transparent-Images.png";
             Items.Add(item);
         }
-
+        public static void UpdateItem(Item item)
+        {
+            var oldItem = Items.Where(i => i.Id == item.Id).FirstOrDefault();
+            oldItem.ImageName = item.ImageName;
+            oldItem.Price = item.Price;
+            oldItem.ImageName = item.ImageName;
+            oldItem.ImageUrl = item.ImageUrl;
+            oldItem.Quantity = item.Quantity;
+        }
     }
 }
