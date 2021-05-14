@@ -1,4 +1,5 @@
 ﻿using MobileFinalProj.Model;
+using MobileFinalProj.Utility;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -14,46 +15,10 @@ namespace MobileFinalProj.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ItemOverviewView : ContentPage
     {
-        public ObservableCollection<Item> Items { get; set; }
         public ItemOverviewView()
         {
             InitializeComponent();
-
-            /*            Items = new ObservableCollection<Item>
-                                    {
-                                        new Item
-                                        {
-                                            Id = 1,
-                                            ItemName = "Nolan Ryan",
-                                            ImageName = "nolanryan.png",
-                                            ImageUrl = "https://i.ebayimg.com/images/g/j1YAAOSwuSZe8v9G/s-l1600.jpg",
-                                            Price = 2.45,
-                                            Quantity = 1
-
-                                        },
-                                        new Item
-                                        {
-                                            Id = 2,
-                                            ItemName = "Rickey Henderson",
-                                            ImageName = "rickeyhenderson.png",
-                                            ImageUrl = "https://retrosportcards.files.wordpress.com/2019/05/unknown-1.jpeg?w=764",
-                                            Price = 2000.00,
-                                            Quantity = 1
-
-                                        },
-                                        new Item
-                                        {
-                                            Id = 3,
-                                            ItemName = "Eddie Murray",
-                                            ImageName = "eddiemurray.png",
-                                            ImageUrl = "https://www.oldsportscards.com/wp-content/uploads/2019/12/1978-Topps-36-Eddie-Murray-Rookie-Card.jpeg",
-                                            Price = 550.00,
-                                            Quantity = 1
-
-                                        },
-                                    };
-
-                        ItemsListView.ItemsSource = Items;*/
+            BindingContext = ViewModelLocator.ItemOverviewViewModel;
         }
 
         private void AddItemButton_OnClicked(object sender, EventArgs e)
@@ -73,7 +38,7 @@ namespace MobileFinalProj.Views
 
         private async void ItemsListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            await this.Navigation.PushAsync(new ItemDetailView(e.Item as Item));
+            await this.Navigation.PushAsync(new ItemDetailView());
         }  
     }
 }

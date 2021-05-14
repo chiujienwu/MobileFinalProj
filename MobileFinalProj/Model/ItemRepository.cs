@@ -38,7 +38,7 @@ namespace MobileFinalProj.Model
                                 ItemName = "Eddie Murray",
                                 ImageName = "eddiemurray.png",
                                 ImageUrl = "https://www.oldsportscards.com/wp-content/uploads/2019/12/1978-Topps-36-Eddie-Murray-Rookie-Card.jpeg",
-                                Price = 550.00,
+                                Price = 1550.00,
                                 Quantity = 1
 
                             }
