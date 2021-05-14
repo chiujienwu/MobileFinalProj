@@ -51,7 +51,7 @@ namespace MobileFinalProj.Model
         public static void AddItem(Item item)
         {
             item.Id = Guid.NewGuid();
-            item.ImageUrl = "https://gillcleerenpluralsight.blob.core.windows.net/files/cherrypiesmall.jpg";
+            item.ImageUrl = "https://freepikpsd.com/wp-content/uploads/2019/10/no-image-png-5-Transparent-Images.png";
             Items.Add(item);
         }
 
