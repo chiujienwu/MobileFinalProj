@@ -77,7 +77,7 @@
                Text="{Binding SelectedItem.Quantity, Mode=TwoWay}"></Entry>
 
             <Button x:Name="SaveItemButton" 
-                Clicked="SaveItemButton_OnClicked" 
+                Command="{Binding SaveCommand}" 
                 Text="Save Item" 
                 Style="{StaticResource RegularButtonStyle}" 
                 Grid.Row="7" 

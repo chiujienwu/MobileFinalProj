@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace MobileFinalProj.ViewModels
 {
@@ -10,6 +12,7 @@ namespace MobileFinalProj.ViewModels
         //public Item Item { get; set; }
 
         private Item _selectedItem;
+        public ICommand SaveCommand { get; }
 
         public Item SelectedItem
         {
@@ -24,7 +27,12 @@ namespace MobileFinalProj.ViewModels
         public ItemDetailViewModel()
         {
             SelectedItem = new Item();
+            SaveCommand = new Command(OnSaveCommand);
         }
 
+        public void OnSaveCommand()
+        {
+
+        }
     }
 }

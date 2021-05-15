@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Text;
+
 using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace MobileFinalProj.ViewModels
 {
@@ -14,6 +16,7 @@ namespace MobileFinalProj.ViewModels
         public ICommand LoadCommand { get; }
         public ICommand AddCommand { get; }
 
+        //constructor
         public ObservableCollection<Item> Items
         {
             get => _items;
@@ -29,6 +32,20 @@ namespace MobileFinalProj.ViewModels
         {
             //Items = new ObservableCollection<Item>();
             Items = new ObservableCollection<Item>(ItemRepository.Items);
+
+            //LoadCommand = new Command(OnLoadCommand);
+            AddCommand = new Command(OnAddCommand);
         }
+
+        public void OnLoadCommand()
+        {
+
+        }
+
+        public void OnAddCommand()
+        {
+            
+        }
+
     }
 }

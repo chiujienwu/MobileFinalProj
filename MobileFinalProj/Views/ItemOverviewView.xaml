@@ -20,16 +20,16 @@
                 <ViewCell>
                     <Grid HeightRequest="70"  Margin="5" BackgroundColor="White" RowSpacing="2">
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"></RowDefinition>
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="50"></ColumnDefinition>
-                            <ColumnDefinition Width="200"></ColumnDefinition>
-                            <ColumnDefinition Width="*"></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
 
-                        <Image Grid.Row="0" HeightRequest="100" WidthRequest="100" VerticalOptions="Start" Margin="2,2,1,2" Source="{Binding ImageUrl}"></Image>
+                        <Image Grid.Row="0" Grid.Column="0" HeightRequest="100" WidthRequest="100" VerticalOptions="Start" Margin="2,2,1,2" Source="{Binding ImageUrl}"></Image>
 
                         <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Start" Style="{StaticResource MediumLabelStyle}" Text="{Binding ItemName}" Margin="3" ></Label>
 
@@ -52,7 +52,7 @@
                             <ColumnDefinition Width="*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-                        <Image Grid.Row="0" HeightRequest="100" WidthRequest="100" VerticalOptions="Start" Margin="2,2,1,2" Source="{Binding ImageUrl}"></Image>
+                        <Image Grid.Row="0" Grid.Column="0" HeightRequest="100" WidthRequest="100" VerticalOptions="Start" Margin="2,2,1,2" Source="{Binding ImageUrl}"></Image>
 
                         <Label Grid.Row="0" Grid.Column="1" VerticalOptions="Start" Style="{StaticResource MediumLabelStyle}" Text="{Binding ItemName}" Margin="3" ></Label>
 
@@ -101,11 +101,17 @@
             
         </ListView>
         <Button x:Name="AddItemButton"
-                Clicked="AddItemButton_OnClicked"
+                Command="{Binding AddCommand}"
                 Text="Add Item"
                 Style="{StaticResource RegularButtonStyle}"
                 Grid.Row="1">
         </Button>
+        <!--<Button x:Name="LoadItemButton"
+                Command="{Binding LoadCommand}"
+                Text="Add Item"
+                Style="{StaticResource RegularButtonStyle}"
+                Grid.Row="2">
+        </Button>-->
     </Grid>
 
 </ContentPage>
